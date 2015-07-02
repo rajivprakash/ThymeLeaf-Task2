@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+     layout:decorator="Master"> 
+  <body>   
+ <div layout:fragment="content">
+<h1>This is Home Page</h1>
+
+<h3
+>what the different between the new topology and previous one (naming , or terms will be accepted as an answer)?</h3>
+<pre style="color: rgb(179, 143, 53);">
+
+The previous one is developed based on Include-style layouts and the current task is developed based on Hierarchical-style layouts.
+
+Include-style layouts : 
+
+a) Thymeleaf's th:include allows to pass the entire element fragments to be included in a HTML page. Useful in reusing the part of HTML code.
+b) Thymeleaf's th:replace to replace the code by the specified part of HTML code.
+
+Hierarchical-style layouts :
+
+The templates are usually created with a parent-child relation, your parent template(Master.html) that will get filled-up or overwritten by your content pages (Home.html and Contact.html).</pre>
+<a th:href="@{Contact}">Click Here For Contact Page</a>
+</div>
+</body>
+</html>
+
